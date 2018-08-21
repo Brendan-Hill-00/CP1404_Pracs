@@ -14,7 +14,7 @@ file_contents.close()
 numbers_file = open('numbers.txt', 'r')
 total = 0
 for line in numbers_file:
-    line = int(line)
-    total += line
+    number = int(line)
+    total += number
 print(total)
 numbers_file.close()

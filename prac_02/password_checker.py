@@ -40,6 +40,8 @@ def is_valid_password(password):
             count_upper += 1
         elif char.islower():
             count_lower += 1
+        elif char in SPECIAL_CHARACTERS:
+            count_special += 1
 
     if count_digit == 0:
         return False
@@ -48,11 +50,9 @@ def is_valid_password(password):
     elif count_upper == 0:
         return False
 
-    if SPECIAL_CHARS_REQUIRED:
-        for char in password:
-            if char in SPECIAL_CHARACTERS:
-                count_special += 1
-        if count_special == 0:
-            return False
+    if SPECIAL_CHARS_REQUIRED and count_special == 0:
+        return False
     return True
+
+
 main()
