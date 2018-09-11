@@ -1,6 +1,7 @@
 CURRENT_YEAR = 2018
 VINTAGE_AGE = 50
 
+
 class Guitar:
     def __init__(self, name="", year=0, cost=0):
         self.name = name
@@ -15,5 +16,3 @@ class Guitar:
 
     def is_vintage(self):
         return self.get_age() >= VINTAGE_AGE
-
-

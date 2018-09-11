@@ -17,7 +17,7 @@ def main():
     # guitars.append(Guitar("Line 6 JTV-59", 2010, 1512.9))
 
     if guitars != []:
-        print("These are my guitars:")
+        print("\nThese are my guitars:")
         for i, guitar in enumerate(guitars):
             vintage_string = ""
             if guitar.is_vintage():
@@ -26,5 +26,6 @@ def main():
                                                                       vintage_string))
     else:
         print("\nNo guitars owned, go buy one!")
+
 
 main()
