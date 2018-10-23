@@ -45,17 +45,21 @@ def run_tests():
     assert test_car.fuel == 0
 
 
+def format_phrase(phrase):
+    """
+    >>> format_phrase("hello")
+    'Hello.'
+    >>> format_phrase("It is an ex parrot")
+    'It is an ex parrot.'
+    >>> format_phrase("testing this case.")
+    'Testing this case.'
+    """
+    sentence = phrase.capitalize()
+    if sentence[-1] != '.':
+        sentence += '.'
+    return sentence
+
+
 run_tests()
 
 doctest.testmod()
-
-
-# TODO: 5. Write and test a function to format a phrase as a sentence,
-# starting with a capital and ending with a single full stop.
-# Important: start with a function header and just use pass as the body
-# then add doctests for 3 tests:
-# 'hello' -> 'Hello.'
-# 'It is an ex parrot.' -> 'It is an ex parrot.'
-# and one more you decide (one that is valid!)
-# test this and watch the tests fail
-# then write the body of the function so that the tests pass
