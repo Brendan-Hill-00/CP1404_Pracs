@@ -11,7 +11,6 @@ def repeat_string(s, n):
     """Repeat string s, n times, with spaces in between."""
     return " ".join([s] * n)
 
-
 def is_long_word(word, length=5):
     """
     Determine if the word is as long or longer than the length passed in
@@ -36,11 +35,14 @@ def run_tests():
     test_car = Car()
     assert test_car.odometer == 0, "Car does not set odometer correctly"
 
-    # TODO: 2. write assert statements to show if Car sets the fuel correctly
     # Note that Car's __init__ function sets the fuel in one of two ways:
     # using the value passed in or the default
     # You should test both of these
     test_car = Car(fuel=10)
+    assert test_car.fuel == 10
+
+    test_car = Car()
+    assert test_car.fuel == 0
 
 
 run_tests()
